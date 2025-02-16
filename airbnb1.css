@@ -1,0 +1,40 @@
+.google-form-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+.google-form-heading {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.google-form-content {
+    margin-top: 20px;
+}
+
+.google-form-input {
+    margin-bottom: 10px;
+}
+
+.google-form-input label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.google-form-submit {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.google-form-submit:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,81 @@
+// Create a function to build the form
+function buildForm() {
+  // Create form container
+  var formContainer = document.createElement('div');
+  formContainer.id = 'customForm';
+  formContainer.className = 'google-form-container';
+
+  // Create heading
+  var heading = document.createElement('h2');
+  heading.textContent = 'Form';
+  heading.className = 'google-form-heading';
+
+  formContainer.appendChild(heading);
+
+  // Create form element
+  var form = document.createElement('form');
+  form.id = 'bookingForm';
+  form.className = 'google-form-content';
+
+  // Create form fields
+  var fields = [
+      { label: 'Name', type: 'text', id: 'name', required: true },
+      { label: 'Age', type: 'number', id: 'age', required: true },
+      { label: 'Number of People', type: 'number', id: 'numOfPeople', required: true },
+      { label: 'Location', type: 'text', id: 'location', required: true }
+  ];
+
+  fields.forEach(field => {
+      var label = document.createElement('label');
+      label.for = field.id;
+      label.textContent = field.label + ':';
+
+      var input = document.createElement('input');
+      input.type = field.type;
+      input.id = field.id;
+      input.name = field.id;
+      input.required = field.required;
+
+      var inputContainer = document.createElement('div');
+      inputContainer.className = 'google-form-input';
+      inputContainer.appendChild(label);
+      inputContainer.appendChild(input);
+
+      form.appendChild(inputContainer);
+  });
+
+  // Create submit button
+  var submitButton = document.createElement('button');
+  submitButton.type = 'submit';
+  submitButton.textContent = 'Submit';
+  submitButton.className = 'google-form-submit';
+
+  form.appendChild(submitButton);
+
+  // Append form to container
+  formContainer.appendChild(form);
+
+  // Append form container to the document body
+  document.body.appendChild(formContainer);
+
+  // Add event listener for form submission
+  form.addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent default form submission
+
+      // Get form values
+      var formData = {};
+      fields.forEach(field => {
+          formData[field.label] = document.getElementById(field.id).value;
+      });
+
+      // Additional validation and form submission logic
+
+      // For demonstration purposes, log the form data
+      console.log('Form Data:', formData);
+
+      // Here you would typically send the form data to a server using AJAX or fetch()
+  });
+}
+
+// Call the buildForm function when the page is loaded
+document.addEventListener('DOMContentLoaded', buildForm);
