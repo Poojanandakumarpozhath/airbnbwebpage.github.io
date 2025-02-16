@@ -23,8 +23,7 @@ This project is a simple Airbnb-style website built using **HTML, CSS, and JavaS
 2. Navigate to the project folder:
    ```sh
    cd airbnb-website
-   ```
-3. Open `index.html` in a web browser.
+   3. Open `index.html` in a web browser.
 
 ## Future Enhancements
 - Implement backend with **Node.js & Express** for real-time booking.
@@ -37,7 +36,4 @@ Contributions are welcome! Feel free to submit issues or pull requests to improv
 ## License
 This project is licensed under the **MIT License**.
 
----
-**Author:** Your Name
-**GitHub:** [Your GitHub Profile](https://github.com/your-username/)
 
